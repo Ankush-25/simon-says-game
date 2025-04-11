@@ -1,0 +1,39 @@
+.Box{
+    border: 5px solid;
+    border-radius: 13px;
+    width: 90px;
+    height: 90px;
+}
+.pink{
+    background-color: rgb(253, 111, 135);
+
+}
+.orange{
+    background-color: rgb(255, 123, 91);
+
+}.blue{
+    background-color: rgb(145, 171, 255);
+
+}.green{
+    background-color: rgb(53, 130, 133);
+
+}
+.row{
+    display: flex;
+    justify-content: 'center';
+    gap:20px
+}
+.boxWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+}
+.flashbtn{
+    background-color: white;
+}
