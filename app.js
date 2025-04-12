@@ -77,4 +77,5 @@ function gameReset(){
     started = false;
     level = 0;
     gameSequence = []
+    userSequence =[]
 }
