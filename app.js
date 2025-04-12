@@ -3,10 +3,12 @@ let userSequence = [];
 
 let started = false;
 let level = 0;
+let score = 0;
 
 let btn = ['pink', 'orange', 'green', 'blue']
 
 let Levelbar = document.querySelector('.currlevel');
+let scoreCard = document.querySelector('.score')
 
 document.addEventListener("keypress", function () {
     if (started === false) {
@@ -36,7 +38,7 @@ function levelUp() {
         level++;
     }
     Levelbar.innerText = `Level ${level}`;
-
+    scoreCard.innerText = `"Your Score ${score}"`
     let randomIndx = Math.floor(Math.random() * btn.length);
     let randomCol = btn[randomIndx];
     let randombtn = document.querySelector(`.${randomCol}`)
@@ -60,12 +62,15 @@ for (allbox of allboxes) {
     allbox.addEventListener('click', userBoxPress)
 }
 
+
+
 function userResponseCheck(idx) {
     console.log("curr level :",level);
     console.log(idx)
     if(gameSequence[idx]== userSequence[idx]){
      if (gameSequence.length === userSequence.length) {
         setTimeout(()=>{levelUp()},1000)
+        score += 5;
     }
     }else{
         Levelbar.innerText = "Game Over: Try Again by clicking any Key";
